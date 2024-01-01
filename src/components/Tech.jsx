@@ -14,7 +14,10 @@ const Tech = () => {
         <p className={styles.sectionSubText}>My skills</p>
         <h2 className={styles.sectionHeadText}>Frameworks, tools and languages.</h2>
       </motion.div>
-      <div className='flex flex-row flex-wrap justify-center gap-10'>
+      <motion.div
+        variants={textVariant()}
+        className='flex flex-row flex-wrap justify-center gap-10'
+      >
         {technologies.map((technology) => (
           <div className='w-28 h-28' key={technology.name}>
             <img
@@ -25,7 +28,7 @@ const Tech = () => {
             {/* <BallCanvas icon={technology.icon} /> */}
           </div>
         ))}
-      </div>
+      </motion.div>
     </>
   );
 };
